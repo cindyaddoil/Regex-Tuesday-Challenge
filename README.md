@@ -32,3 +32,10 @@ Today's Regex Tuesday challenge, the sixth challenge, is to match IPv4 addresses
 `/^(((\d{1,2})|([01]\d{2})|(2[0-4]\d)|25[0-5]|0x[0-9a-fA-F][0-9a-fA-F]?|0[0-3][0-7][0-7])(\.|$)){4}/i`  
 `0[0-3][0-7]{,10}|0x[0-9a-fA-F]{0,8}|[1-3][0-9]{0,9}|4[01]\d{8}|42[0-8]\d{7}`  
 `/^(((\d{1,2})|([01]\d{2})|(2[0-4]\d)|25[0-5]|0x[0-9a-fA-F][0-9a-fA-F]?|0[0-3][0-7][0-7])(\.(?!$)|$)){4}$|^(0[0-3][0-7]{0,10})$|^(0x[0-9a-fA-F]{0,8})$|^([1-3][0-9]{0,9})$|(4[01]\d{8}|42[0-8]\d{7}|429[0-3]\d{6}|4294[0-8]\d{5}|42949[0-5]\d{4}|429496[0-6]\d{3}|4294967[0-1]\d{2}|42949672[0-8]\d{1}|429496729[0-5])/i`
+
+## Challenge 7
+The seventh regex tuesday challenge is to match valid domain names with protocols (http and https) in front of them and an optional slash (/) behind them. To keep it simple, you do not have to worry about special characters.  
+`/^(https?):\/\/(?!-)([\w]{1,30}[-\.]){1,40}\w+\/?$/i`  
+`/^(https?):\/\/(?!-)([a-z0-9A-Z]{1,30}[-\.]){1,40}\w+\/?$/i`  
+`/^(https?):\/\/([a-z0-9A-Z]{1,30}[-\.]){1,40}\w+\/?$/i`  
+
