@@ -26,3 +26,9 @@ a MarkDown parser - turn italic MarkDown (*this is italic*) into HTML italic: <e
 ## Challenge 5
 The fifth Regex Tuesday challenge is to write a regular expressions which matches correctly formatted (with correct thousand seperators and decimal places). It should be able to match both main number syntaxes (10,000,000.45 and 10 000 000,45), and should not match invalid numbers such as 123.456.789.  
 `/^\d{1,3}([ ,]\d{3})*([.,]\d+)?$/i`
+
+## Challenge 6
+Today's Regex Tuesday challenge, the sixth challenge, is to match IPv4 addresses in the syntaxes (dotted decimal, dotted hexadecimal, dotted octal, hexadecimal, decimal and octal) specified on Wikipedia. More test cases will be added to this challenge later.  
+`/^(((\d{1,2})|([01]\d{2})|(2[0-4]\d)|25[0-5]|0x[0-9a-fA-F][0-9a-fA-F]?|0[0-3][0-7][0-7])(\.|$)){4}/i`  
+`0[0-3][0-7]{,10}|0x[0-9a-fA-F]{0,8}|[1-3][0-9]{0,9}|4[01]\d{8}|42[0-8]\d{7}`  
+`/^(((\d{1,2})|([01]\d{2})|(2[0-4]\d)|25[0-5]|0x[0-9a-fA-F][0-9a-fA-F]?|0[0-3][0-7][0-7])(\.(?!$)|$)){4}$|^(0[0-3][0-7]{0,10})$|^(0x[0-9a-fA-F]{0,8})$|^([1-3][0-9]{0,9})$|(4[01]\d{8}|42[0-8]\d{7}|429[0-3]\d{6}|4294[0-8]\d{5}|42949[0-5]\d{4}|429496[0-6]\d{3}|4294967[0-1]\d{2}|42949672[0-8]\d{1}|429496729[0-5])/i`
