@@ -22,3 +22,7 @@ The third regex tuesday challenge is to match dates in YYYY/MM/DD HH:MM(:SS) for
 a MarkDown parser - turn italic MarkDown (*this is italic*) into HTML italic: <em>this is italic</em>. It should not, however, match bold text - text surrounded by multiple asterisks.  
 `/(^|[^*])\*([^*].+?[^*])\*(?=[^*]|$)/g`  
 `$1<em>$2</em>`
+
+## Challenge 5
+The fifth Regex Tuesday challenge is to write a regular expressions which matches correctly formatted (with correct thousand seperators and decimal places). It should be able to match both main number syntaxes (10,000,000.45 and 10 000 000,45), and should not match invalid numbers such as 123.456.789.  
+`/^\d{1,3}([ ,]\d{3})*([.,]\d+)?$/i`
