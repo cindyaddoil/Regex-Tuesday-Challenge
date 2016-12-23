@@ -57,3 +57,5 @@ Be careful with images. ![alt text](image location) should be left alone, as it 
 If you don't want to write an expression for URLs too, you can see answers to the previous challenge on URLs on Reddit.
 
 `/([\w\s:]*)\[([\s\w\.!]*)\]\(((https?):\/\/([a-z0-9A-Z]{1,30}[-\.]){1,40}\w+\/?)\)/i`  `$1<a href="$3">$2</a>`
+
+`/([\w\s:]*)( |^)\[([\s\w\.!]*)\]\(((https?):\/\/([a-z0-9A-Z]{1,30}[-\.]){1,40}\w+\/?)\)(?!\w)/i`  `$1$2<a href="$4">$3</a>`
