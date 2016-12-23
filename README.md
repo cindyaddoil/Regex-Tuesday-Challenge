@@ -49,3 +49,11 @@ Repeated items should be wrapped in double asterisks, for MarkDown bold. The sec
 `/(\*\s*([\*\s\w]+)\n\*\s*)(\2)(?=\n|$)/ig`
 `$1**$3**`  
 
+## Challenge 9
+Another MarkDown challenge! This challenge is simply to parse MarkDown links - so [text](http://example.com) would simply be replaced with the following HTML: <a href="http://example.com">text</a>.
+
+Be careful with images. ![alt text](image location) should be left alone, as it isn't a link.
+
+If you don't want to write an expression for URLs too, you can see answers to the previous challenge on URLs on Reddit.
+
+`/([\w\s:]*)\[([\s\w\.!]*)\]\(((https?):\/\/([a-z0-9A-Z]{1,30}[-\.]){1,40}\w+\/?)\)/i`  `$1<a href="$3">$2</a>`
