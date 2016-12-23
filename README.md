@@ -39,3 +39,9 @@ The seventh regex tuesday challenge is to match valid domain names with protocol
 `/^(https?):\/\/(?!-)([a-z0-9A-Z]{1,30}[-\.]){1,40}\w+\/?$/i`  
 `/^(https?):\/\/([a-z0-9A-Z]{1,30}[-\.]){1,40}\w+\/?$/i`  
 
+## Challenge 8
+This challenge is a hybrid of challenge #1 - matching repeated words - and challenge #4, a basic MarkDown parser. The challenge is to match (immediately) repeating MarkDown list items! Check out the examples - it is easier to look at them than to have it explained.  
+
+Repeated items should be wrapped in double asterisks, for MarkDown bold. The second * List item should be replaced with * **List item**  
+`/(\*\s*([\*\s\w]+)\n\*\s*)(\2)/i`  
+`$1**$3**`
