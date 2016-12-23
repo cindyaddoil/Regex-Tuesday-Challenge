@@ -45,3 +45,7 @@ This challenge is a hybrid of challenge #1 - matching repeated words - and chall
 Repeated items should be wrapped in double asterisks, for MarkDown bold. The second * List item should be replaced with * **List item**  
 `/(\*\s*([\*\s\w]+)\n\*\s*)(\2)/i`  
 `$1**$3**`
+
+`/(\*\s*([\*\s\w]+)\n\*\s*)(\2)(?=\n|$)/ig`
+`$1**$3**`  
+
